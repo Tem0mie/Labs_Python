@@ -38,8 +38,7 @@ class Library:
 
     def get_index_by_book_id(self, index: int):
         for i, id_ in enumerate(self.books):
-            a = id_.__dict__
-            if a["id"] == index:
+            if id_.id == index:
                 return i
             raise ValueError("Книги с запрашиваемым id не существует")
 
