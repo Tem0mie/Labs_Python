@@ -33,6 +33,8 @@ class PaperBook(Book):
 
     @pages.setter
     def pages(self, new_pages: int):
+        if not isinstance(pages, int):
+            raise TypeError("'pages' должен быть типа integer")
         if new_pages < 0:
             raise ValueError("'pages' не может быть отрицательным числом")
         self.__pages = new_pages
@@ -55,6 +57,8 @@ class AudioBook(Book):
 
     @duration.setter
     def duration(self, new_duration: float):
+         if not isinstance(duration, int):
+            raise TypeError("'duration' должен быть типа integer")
         if new_duration < 0:
             raise ValueError("'duration' не может быть отрицательным числом")
         self.__duration = new_duration
